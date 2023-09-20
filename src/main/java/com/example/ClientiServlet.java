@@ -70,7 +70,7 @@ public class ClientiServlet extends HttpServlet {
             for (Clienti cliente : clientiList) {
                 // Includi il valore del campo isAdmin in ogni riga
                 writer.println(cliente.getId() + "," + cliente.getNome() + "," + cliente.getCognome() + ","
-                        + cliente.getEmail() + "," + (cliente.getIsAdmin() ? "Sì" : "No"));
+                        + cliente.getEmail() + "," + (cliente.getIsAdmin() ? "Si" : "No"));
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
