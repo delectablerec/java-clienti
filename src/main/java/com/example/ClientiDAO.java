@@ -20,7 +20,7 @@ public class ClientiDAO {
 
     public List<Clienti> getAllClienti() {
         String sql = "SELECT id, nome, cognome, email, isAdmin FROM clienti";
-        List<Clienti> clientiList = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         try (Connection conn = this.connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
             ResultSet rs = pstmt.executeQuery();
